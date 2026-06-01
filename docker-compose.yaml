@@ -192,11 +192,11 @@ services:
       cloudflared:
         condition: service_started
     healthcheck:
-      test: ["CMD-SHELL", "python3 -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:8000/api/v1/health\")'"]
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/api/v1/health || exit 1"]
       interval: 30s
       timeout: 10s
-      retries: 3
-      start_period: 400s
+      retries: 5
+      start_period: 180s
     networks:
       - app-network
 
