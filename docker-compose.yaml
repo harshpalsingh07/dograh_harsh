@@ -195,12 +195,12 @@ services:
       test:
         [
           "CMD-SHELL",
-          'python -c "import urllib.request; urllib.request.urlopen(''http://localhost:8001/api/v1/health'').read()"',
+          'python -c "import urllib.request; urllib.request.urlopen(''http://localhost:8000/api/v1/health'').read()"',
         ]
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 60s
+      start_period: 400s
     networks:
       - app-network
 
