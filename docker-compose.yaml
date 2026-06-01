@@ -173,7 +173,7 @@ services:
       TURN_SECRET: "${TURN_SECRET:-}"
       FORCE_TURN_RELAY: "${FORCE_TURN_RELAY:-false}"
 
-      OSS_JWT_SECRET: "${OSS_JWT_SECRET:?OSS_JWT_SECRET must be set to a strong secret}"
+      OSS_JWT_SECRET: "d7f3a92e1c8b4056e9f2a71d3c5b8e0f4a6d2c9b7e1f3a5d8c2b4e6f9a1d3c5"
 
       # Telemetry
       ENABLE_TELEMETRY: "${ENABLE_TELEMETRY:-true}"
